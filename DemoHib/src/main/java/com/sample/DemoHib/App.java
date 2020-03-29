@@ -24,8 +24,10 @@ public class App
         
         Session session = sf.openSession();
         
-        Transaction tx = session.beginTransaction();
+        Transaction transaction = session.beginTransaction();
+        
         session.save(alien);
-        tx.commit();
+        
+        transaction.commit();
     }
 }
